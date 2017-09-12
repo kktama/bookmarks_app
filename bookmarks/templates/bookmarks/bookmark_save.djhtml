@@ -1,0 +1,7 @@
+{% extends "base.djhtml" %}
+{% block title %}Save Bookmark{% endblock %}
+{% block head %}Save Bookmark{% endblock %}
+{% block content %}
+{% include 'bookmarks/bookmark_save_form.djhtml' %}
+{% endblock %}
+
