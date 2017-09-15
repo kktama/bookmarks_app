@@ -23,6 +23,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     # Browsing
     url(r'^$', main_page, name='main_page'),
+    url(r'^popular/$', popular_page, name='popular_page'),
     url(r'^user/(\w+)/$', user_page, name='user_page'),    
     url(r'^admin/', admin.site.urls),
     url(r'^tag/([^\s]+)/$', tag_page, name='tag_page'),
@@ -37,4 +38,5 @@ urlpatterns = [
 
     # Account management
     url(r'^save/$', bookmark_save_page, name='bookmark_save_page'),
+    url(r'^vote/$', bookmark_vote_page, name='bookmark_vote_page'),
 ]
