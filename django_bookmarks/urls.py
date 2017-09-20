@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^tag/([^\s]+)/$', tag_page, name='tag_page'),
     url(r'^tag/$', tag_cloud_page, name='tag_cloud_page'),
     url(r'^search/$', search_page, name='search_page'),
+    url(r'^bookmark/(\d+)/$', bookmarks_page, name='bookmarks_page'),
 
     # Session management
     url(r'^login/$', auth_views.login, name='login'),
@@ -39,4 +40,7 @@ urlpatterns = [
     # Account management
     url(r'^save/$', bookmark_save_page, name='bookmark_save_page'),
     url(r'^vote/$', bookmark_vote_page, name='bookmark_vote_page'),
+
+    # Comments
+    url(r'^comments/', include('django_comments.urls')),
 ]

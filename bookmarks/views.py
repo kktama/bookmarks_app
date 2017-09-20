@@ -214,3 +214,11 @@ def popular_page(request):
     )[:10]
     context = {'shared_bookmarks': shared_bookmarks}
     return render(request, 'popular_page.djhtml', context)
+
+def bookmarks_page(request, bookmark_id):
+    shared_bookmark = get_object_or_404(
+        SharedBookmark,
+        id=bookmark_id
+    )
+    context = {'shared_bookmark': shared_bookmark}
+    return render(request, 'bookmark_page.djhtml', context)
