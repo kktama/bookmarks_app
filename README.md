@@ -2,6 +2,7 @@
 
 
 ブックマーク共有アプリ。
+お気に入りのサイトのURLを共有したり、コメントしあったりすることができる。
 
 
 
@@ -21,5 +22,7 @@ pip3 install django-contrib-comments
 1. cloneしてワーキングツリーのルートディレクトリに入る。
 2. python3 manage.py runserver 
 3. ブラウザで、localhost:8000 にアクセス。
+
+
 
  
